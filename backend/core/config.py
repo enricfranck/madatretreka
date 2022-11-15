@@ -11,7 +11,7 @@ class Settings:
     PROJECT_NAME: str = "adventure Board"
     PROJECT_VERSION: str = "1.0.0"
 
-    USE_SQLITE_DB = True
+    USE_SQLITE_DB = False
     POSTGRES_USER: str = os.getenv("POSTGRES_USER")
     POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
     POSTGRES_SERVER: str = os.getenv("POSTGRES_SERVER", "localhost")
