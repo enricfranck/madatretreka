@@ -12,7 +12,7 @@ if settings.USE_SQLITE_DB:
 		SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 	)
 else:
-	SQLALCHEMY_DATABASE_URL = "postgres://qvksmvjzagqgxs:61344e8e24469c20c965090fdd18587227895b9791776fc06ee99d728be7712f@ec2-52-1-17-228.compute-1.amazonaws.com:5432/d9tv0fscv0ohbs"
+	SQLALCHEMY_DATABASE_URL = "postgresql://qvksmvjzagqgxs:61344e8e24469c20c965090fdd18587227895b9791776fc06ee99d728be7712f@ec2-52-1-17-228.compute-1.amazonaws.com:5432/d9tv0fscv0ohbs"
 	engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 
