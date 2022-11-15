@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,
+			initial-scale=1.0,maximum-scale=1">
+
+		<title>Customer Protection</title>
+		<!-- Loading third party fonts -->
+		<link
+			href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,700"
+			rel="stylesheet" type="text/css">
+		<link href="{{ url_for('static', path='fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{{ url_for('static', path='css/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div id="site-content">
+			<div class="slider">
+				<ul class="slides">
+					<li data-background="{{ url_for('static', path='dummy/slide-6.jpg') }}">
+
+					</li>
+
+
+				</ul>
+				<div class="flexslider-controls">
+					<div class="container">
+
+					</div>
+				</div>
+			</div>
+			<header class="site-header wow fadeInDown" style="position:absolute; left: 10%; top: 15px; transform: translateX(-50% -50%);">
+				<div class="container">
+					<div class="header-content">
+						<div class="branding">
+							<a href="{{ url_for('home') }}">
+								<img src="{{ url_for('static', path='images/logo.png') }}" alt="Company Name" class="logo">
+							</a>
+
+						</div>
+
+						<nav class="main-navigation">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="{{ url_for('home') }}">Accueil</a></li>
+								<li class="menu-item"><a href="{{ url_for('about_us') }}" >Qui sommes nous</a></li>
+								<li class="menu-item"><a href="{{ url_for('customer_protection') }}">Madagascar</a></li>
+								<li class="menu-item"><a href="{{ url_for('our_offer') }}">nos circuits</a></li>
+								<li class="menu-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+							</ul>
+						</nav>
+
+					</div>
+					<nav class="breadcrumbs">
+						<a href="{{ url_for('home') }}">Accueil</a> &rarr;
+						<span>Madagascar</span>
+					</nav>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 wow fadeInLeft">
+								<h2 class="section-title">Madagascar</h2>
+								<section id="localisation">
+									<h3>PRESENTATION DE MADAGASCAR </h3>
+									<p>Madagascar a vu le jour il y a 60 millions d’années en quittant la
+										plaque tectonique africaine qui a entrainé son indépendance
+										géologique, un des facteurs importants de son endémicité, son unicité
+										et sa richesse en ressources naturelles, incontestablement cela a
+										permis la création des nouvelles espèces endémiques. </p>
+									<h4>LOCALISATION DE MADAGASCAR</h4>
+									Madagascar est un Pays en Afrique de l'Est ; une île immense situé au
+									large de la côte sud-est de l'Afrique. Il abrite des milliers d'espèces
+									animales endémiques comme les lémuriens, ainsi que des forêts
+									tropicales, des plages et des récifs. <br>
+									<ul>
+										<li>
+											Capitale : Antananarivo
+										</li>
+										<li>
+											Superficie : 591 896 km2
+										</li>
+										<li>
+											Population : 27,69 millions (2020) Banque mondiale
+										</li>
+										<li>
+											Devise : Ariary
+										</li>
+									</ul>
+								</section>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="delimitation">
+										<h4>SITUATION, DELIMITATION </h4>
+										<p>Situé dans la partie sud-ouest de l’océan Indien, au sud de
+											l’équateur et traversé par le tropique du Capricorne, Madagascar est
+											la cinquième plus grande île du monde après l'Australie, le
+											Groenland, la Nouvelle-Guinée et Bornéo. Elle fait partie de
+											l'Afrique, le canal du Mozambique, d'une largeur d'environ 400 km, la
+											séparant de l'Afrique de l'Est continentale.
+											C’est la cinquième plus grande île du monde après l'Australie, le
+											Groenland, la Nouvelle-Guinée et Bornéo. Distant de 400 km de la cote
+											africaine, Madagasikara par sa nature est un sanctuaire écologique
+											unique au monde. Longue de 1 580 km et large de 580 km, Madagascar
+											couvre une superficie de 591 896 km2. Sa capitale est Antananarivo et
+											le pays a pour monnaie l'ariary. Ses habitants, les Malagasy, sont un
+											peuple austronésien parlant une langue malayo-polynésienne : le
+											malagasy. Le pays est entouré par d'autres îles et archipels dont
+											Maurice, les Seychelles, Mayotte, les Comores et la Réunion.
+										</p>
+									</section>
+								</div>
+								<br>
+								<section id="histoire">
+									<h4>HISTOIRE DE MADAGASCAR</h4>
+									<p>Durant la majeure partie du XIXe siècle, l'île est administrée par
+										le royaume de Madagascar, cette administration s'exerce dans le cadre
+										du protectorat français après 1883, à la suite de la première
+										expédition de Madagascar. Le premier gouvernement autonome malagasy
+										revoit le jour le 10 octobre 1958 lorsque la république de Madagascar
+										est proclamée sur le territoire. En 1960, la République malagasy
+										accède à l'indépendance, ce qui fait du pays l'un des premiers à
+										devenir indépendant dans cette zone de l'océan Indien.</p>
+								</section>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="typonomie">
+										<h4>TYPONOMIE</h4>
+										<p>Le terme « Madagascar » est d'origine européenne, et semble être
+											une translittération de l'arabe بالإيطالية soit malay-jazayra, « île
+											malaise » (les Arabes ayant remarqué la parenté linguistique entre
+											Malagasys et Malais, avec qui ils commerçaient). Ce mot a d'ailleurs
+											également eu des traductions latines en malai insula, abrégé en
+											malains[h]u puis Malichu, forme que l'on retrouve sur certaines
+											cartes de la Renaissance. Certaines sources suggèrent que ce serait
+											également l'étymologie de Ķ(u)mr’, qui pourrait être apparenté à
+											khmer (même si khmers et malais sont des peuples bien distincts).</p>
+									</section>
+								</div>
+								<br>
+								<section id="origine">
+									<h4>ORIGINES DE LA POPULATION MALAGASY ACTUELLE DIVERSITE ETHNIQUE</h4>
+									<p>Les découvertes archéologiques permettent d'envisager une première
+										présence de l'espèce humaine à Madagascar il y a au moins 10 000 ans.
+										Si, comme dans toute société, la mixité ethnique existe et se
+										développe dans le cadre du concept de « fihavanana ». Les différences
+										culturelles sont marquées entre les peuples côtiers et ceux des hauts
+										plateaux. La diversité des ethnies malagasy n’est pas de type racial
+										ou culturel, mais bien plutôt d’ordre géographique, politique ou
+										économique.
+										Outre les 18 ethnies, certaines communautés issues d'une immigration
+										récente (à partir des années 1900) sont considérées comme la 19e
+										ethnie. Il s'agit notamment :
+										<ul>
+											<li>des Comoriens, vivant principalement dans les provinces
+												d'Antsiranana et Majunga ;</li>
+											<li>de la communauté européenne (« Vazaha »), descendants de colons
+												ou expatriés installés sur l'île depuis l'indépendance ;</li>
+											<li>de la communauté chinoise d'origine cantonaise (« Sinoa »), pour
+												la plupart commerçants de détail et alimentaire ;</li>
+											<li>de la communauté indo-pakistanaise (« Karana »), propriétaires de
+												magasins particuliers et de bijouteries.</li>
+										</ul>
+									</p>
+								</section>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="decoupage">
+										<h4>LES NOUVEAUX DECOUPAGES REGIONAUX ET LES ANCIENNES PROVINCES </h4>
+										<p>Les six ex-provinces, nommées en fonction de leur capitale, sont
+											découpées en 23 régions en 2004. La révision 2007 de la constitution
+											de 1992, supprima l'autonomie de ces provinces. Depuis la
+											constitution de 2010, « Les collectivités territoriales
+											décentralisées de la République sont les communes, les régions et les
+											provinces ».
+											<ul>
+												<li>
+													Antananarivo ou Tananarive,
+												</li>
+												<li>
+													Antsiranana ou Diégo-Suarez
+												</li>
+												<li>
+													Fianarantsoa
+												</li>
+												<li>
+													Mahajanga ou Majunga,
+												</li>
+												<li>
+													Toamasina ou Tamatave et
+												</li>
+												<li>
+													Toliara ou Tuléar.
+												</li>
+											</ul>
+										</p>
+									</section>
+								</div>
+								<br>
+								<section id="langue">
+									<h4>LANGUES A MADAGASCAR</h4>
+									<p>Madagascar a été colonisé par la France jusqu’en 1960, année de son
+										indépendance, la langue maternelle et officielle est le Malagasy.
+										Néanmoins, la langue française reste la langue principale
+										d’enseignement dans les écoles, même si la majorité de la population
+										ne la maîtrise pas encore.
+										Malgré la diversité du peuplement qui est à l'origine des différents
+										langages dans toute l'île, une langue commune s'est constituée : le
+										malagasy qui est la langue nationale mais chaque région a aussi sa
+										propre langue maternelle.
+										Le français est la deuxième langue officielle, parlée par environ 20 %
+										des Malagasys.
+									</p>
+								</section>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="">
+										
+									</section>
+								</div>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="">
+										
+									</section>
+								</div>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="">
+										
+									</section>
+								</div>
+								<br>
+								<div style="position: relative; background-color: rgba(232, 232, 232,
+									0.205); width: 100%; border-radius: 5px; padding: 20px; ">
+									<section id="">
+										
+									</section>
+								</div>
+							</div>
+							<div class="col-md-3 col-md-push-1 wow fadeInRight" style="position:
+								fixed; top:7%; left: 70%;">
+								<h2 class="section-title">sommaires</h2>
+								<ul class="list-arrow alt">
+									<li><a href="#localisation">(1) PRESENTATION DE MADAGASCAR</a></li>
+									<li><a href="#delimitation">(2) SITUATION, DELIMITATION</a></li>
+									<li><a href="#histoire">(3) HISTOIRE DE MADAGASCAR</a></li>
+									<li><a href="#typonomie">(4) TYPONOMIE</a></li>
+									<li><a href="#origine">(5)	ORIGINES DE LA POPULATION MALAGASY ACTUELLE DIVERSITE ETHNIQUE </a></li>
+									<li><a href="#decoupage">(6)	LES NOUVEAUX DECOUPAGES REGIONAUX ET LES ANCIENNES PROVINCES</a></li>
+									<li><a href="#langue">(7)	LANGUES A MADAGASCAR</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+									<li><a href="#">Bahreway bahreway</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+			</main> <!-- .content -->
+
+			<footer class="site-footer wow fadeInUp">
+
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="branding pull-left">
+							<img src="{{ url_for('static', path='images/logo-footer.png') }}" alt="Company Name" class="logo">
+
+						</div>
+
+						<div class="contact-links pull-right">
+							<a href="https://goo.gl/maps/oQKxg"><i class="fa fa-map-marker"></i>
+								Fianarantsoa</a>
+							<a href="tel:+134453455345"><i class="fa fa-phone"></i> +261-3X-XX-XXX-XX</a>
+							<a href="mailto:contact@companyname.com"><i class="fa fa-envelope"></i>
+								Mada@tretreka.com</a>
+						</div>
+					</div>
+				</div>
+				<div class="colophon">
+					<div class="container">
+						<p class="copy">Copyright 2022 Company Name, Designed by Themezy, All
+							right reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+		<script src="{{ url_for('static', path='js/jquery-1.11.1.min.js') }}"></script>
+		<script src="{{ url_for('static', path='js/min/plugins-min.js') }}"></script>
+		<script src="{{ url_for('static', path='js/min/app-min.js') }}"></script>
+
+	</body>
+
+</html>

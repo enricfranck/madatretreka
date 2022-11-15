@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,
+			initial-scale=1.0,maximum-scale=1">
+
+		<title>Mada Tretreka</title>
+		<!-- Loading third party fonts -->
+		<link
+			href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,700"
+			rel="stylesheet" type="text/css">
+		<link href="{{ url_for('static', path='fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{{ url_for('static', path='css/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+
+		<!--[if lt IE 9]>
+		<script src="{{ url_for('static', path='js/ie-support/html5.js') }}" ></script>
+		<script src="{{ url_for('static', path='js/ie-support/respond.js') }}"></script>
+		<![endif]-->
+	</head>
+
+	<body class="slider-collapse">
+
+		<div id="site-content">
+
+			<header class="site-header wow fadeInDown">
+				<div class="container">
+					<div class="header-content">
+						<div class="branding">
+							<img src="{{ url_for('static', path='images/tretreka.png') }}" alt="Company Name" class="logo">
+						</div>
+
+						<nav class="main-navigation">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item current-menu-item"><a href="">Accueil</a></li>
+								<!--
+									<li class="menu-item"><a href="our-offer.html">Accueil</a></li>
+								-->
+								<li class="menu-item"><a href="{{ url_for('about_us') }}" >Qui sommes nous</a></li>
+								<li class="menu-item"><a href="{{ url_for('customer_protection') }}">Madagascar</a></li>
+								<li class="menu-item"><a href="{{ url_for('our_offer') }}">nos circuits</a></li>
+								<li class="menu-item"><a  href="{{ url_for('our_offer') }}">Location voitures</a></li>
+								<li class="menu-item"><a  href="{{ url_for('our_offer') }}">Mada tretreka</a></li>
+								<li class="menu-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="content">
+				<div class="slider">
+					<ul class="slides">
+						<li data-background="{{ url_for('static', path='dummy/slide-1.jpg') }}">
+							<div class="container">
+								<div class="slide-caption col-md-4">
+									<h2 class="slide-title">Sens de notre logo</h2>
+									<p><span style="background-color: yellow; color:red;
+											font-weight:bold;">MADA</span>: chaque membre fondateur est natif de
+										Madagascar</p>
+								</div>
+							</div>
+						</li>
+						<li data-background="{{ url_for('static', path='dummy/slide-2.jpg') }}">
+							<div class="container">
+								<div class="slide-caption col-md-4">
+									<h2 class="slide-title">Sens de notre logo</h2>
+									<p> <span style="background-color:rgb(0, 227,
+											30);color:white;font-weight:bold">TRETREKA</span> : pour son nom
+										Malagasy, son endémicité, sa rareté et son caractère</p>
+								</div>
+							</div>
+						</li>
+						<li data-background="{{ url_for('static', path='dummy/slide-3.jpg') }}">
+							<div class="container">
+								<div class="slide-caption col-md-4">
+									<h2 class="slide-title">Sens de notre logo</h2>
+									<p>COULEUR : <span style="color:red;">rouge</span> (énergie et passion)
+										; <span style="box-shadow: 1px 1px 1px rgba(206, 206, 206, 0.867);
+											background-color: rgba(202, 202, 202, 0.997);
+											color:white;border-radius:5px; ">blanc</span> (pureté et innocence) ;
+										<span style="color:rgb(0, 207, 0);">vert</span> (nature, richesse de
+										la biodiversité, tourisme vert) ; <span style="color:yellow;">jaune</span>
+										(spontanéité, espoir) ; <span style="color:rgb(0, 64, 255);">bleu</span>
+										(confiance, calme)</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="flexslider-controls">
+						<div class="container">
+							<ol class="flex-control-nav">
+								<li><a>1</a></li>
+								<li><a>2</a></li>
+								<li><a>3</a></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+
+				<div class="fullwidth-block features-section">
+					<div id="text-intro" class="container">
+						<p>
+							Nous sommes avant tout un groupe d’amis se connaissant depuis l’enfance
+							et qui se sont perdu de vue jusqu’en 2019. Chacun a fait son petit bout
+							de chemin personnel et professionnel après la fac et, par la force des
+							choses, nous nous sommes retrouvés à Fianarantsoa après le confinement
+							autour d’un thème commun et d’une cause commune : le <span
+								style="font-weight:bold;">tourisme</span> et la <span
+								style="font-weight:bold;">nature</span>. Une retrouvaille qui s’est
+							avérée fructueuse car elle a abouti à la naissance de <span
+								style="font-weight:bold;">MADATRETREKA</span>. <br><br>
+							<b>MADATRETREKA</b> (Mada, diminutif de Madagascar et Tretreka, oiseau
+							endémique de l’île, connu sous le nom scientifique de Leptoptyris
+							Viridis) est donc une association œuvrant dans le tourisme durable et
+							responsable.
+						</p>
+					</div>
+					<div style="background-color:rgba(239, 239, 239, 0.404);">
+						<div class="container">
+							<p>
+								Madagascar est reconnu pour ses grandes réserves de ressources
+								naturelles présentant des atouts majeurs en matière de tourisme. <br>
+								Le tourisme vert appelé aussi écotourisme, que <b>MADATRETREKA</b> vous
+								propose, est une découverte de la nature, en conjuguant tourisme rurale
+								et protection de l’environnement. L’objectif est non seulement de
+								partager, de faire des échanges entre la population riveraine et les
+								visiteurs, mais aussi et surtout, de sensibiliser les visiteurs sur
+								l'importance de la conservation, ainsi que de faire prendre conscience
+								de la nécessité de préserver l'environnement naturel et le patrimoine
+								culturel. Nous privilégions ainsi le partenariat avec les organismes
+								locaux tels que l’<b>ONG MIORA Hanitriniala</b> à Ikamby, … <br><br><br>
+								Nous sollicitons nos voyageurs, nos visiteurs et nos invités à
+								participer aux activités spécifiques suivantes : <br>
+							</p>
+						</div>
+					</div>
+					<div class="container" style="margin-top: 50px;">
+						<div class="row" >
+							<div class="col-md-4 col-sm-6 col-xs-12">
+								<div class="feature left-icon wow fadeInLeft" data-wow-delay=".3s">
+									<i class="icon-flower"></i>
+									<div class="widget">
+										<h3 class="feature-title">ACTIVITES PROPRES A LA CONSERVATION DE LA
+											BIODIVERSITE ET A LA PROTECTION DES SITES TOURISTIQUES </h3>
+										<ul class="list-arrow">
+											<li style="">Reboisement communautaire</li>
+											<li>Agroforesterie</li>
+											<li>Restauration forestière</li>
+											<li>Résilience communautaire</li>
+											<li>Smart agriculture</li>
+											<li>Adaptation et (changement climatique), projet carbone</li>
+											<li>Education environnementale et sensibilisation</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class=" col-md-4 col-sm-6 col-xs-12">
+								<div class="feature left-icon wow fadeInRight">
+									<i class="icon-postcard"></i>
+									<div class="widget">
+										<h3 class="feature-title">ACTIVITES PROPRES AU PLAN DES AFFAIRES -
+											CHAINE DE VALEURS ET DE COMMUNICATION</h3>
+										<ul class="list-arrow">
+											<li>Rencontres : sportifs, ateliers, débats, échanges culturelles,
+												partages</li>
+											<li>Développement des produits touristiques</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class=" col-md-4 col-sm-6 col-xs-12">
+								<div class="feature left-icon wow fadeInRight" data-wow-delay=".3s">
+									<i class="icon-chair"></i>
+									<div class="widget">
+
+										<h3 class="feature-title">ACTIVITES PROPRES AU TOURISME DURABLE</h3>
+										<ul class="list-arrow">
+											<li>Ecotourisme communautaire</li>
+											<li>Randonnées</li>
+											<li>Séjours personnalisés </li>
+											<li>Trekkings</li>
+											<li>Marches</li>
+											<li>Diongy (piétinement)</li>
+											<li>Pirogues et Fishing</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="fullwidth-block offers-section" data-bg-color="#f1f1f1">
+					<div class="container">
+						<h2 class="section-title">Nos circuits</h2>
+						<div class="row">
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<article class="offer wow bounceIn">
+									<figure class="featured-image"><img src="{{ url_for('static', path='dummy/offer-thumbnail-1.jpg') }}" 
+											alt=""></figure>
+									<h2 class="entry-title">La terre des aventures</h2>
+									<p>...</p>
+									<a href="#" class="button">Détails ></a>
+								</article>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<article class="offer wow bounceIn" data-wow-delay=".2s">
+									<figure class="featured-image"><img src="{{ url_for('static', path='dummy/offer-thumbnail-2.jpg') }}" 
+											alt=""></figure>
+									<h2 class="entry-title">Le trésor caché de l'ouest</h2>
+									<p>...</p>
+									<a href="#" class="button">Détails ></a>
+								</article>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<article class="offer wow bounceIn" data-wow-delay=".4s">
+									<figure class="featured-image"><img src="{{ url_for('static', path='dummy/offer-thumbnail-3.jpg') }}"
+											alt=""></figure>
+									<h2 class="entry-title">La terre des Inconnus</h2>
+									<p>...</p>
+									<a href="#" class="button">Détails ></a>
+								</article>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<article class="offer wow bounceIn" data-wow-delay=".6s">
+									<figure class="featured-image"><img src="{{ url_for('static', path='dummy/offer-thumbnail-4.jpg') }}"
+											alt=""></figure>
+									<h2 class="entry-title">Le secret de l'ile rouge</h2>
+									<p>...</p>
+									<a href="#" class="button">Détails ></a>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="fullwidth-block testimonial-section">
+					<div class="container">
+						<h2 class="section-title">Les membres de l'équipe</h2>
+						<div class="row">
+							<a href="about-us.html#fanabird">
+								<div class="adjust col-md-10 col-sm-6 col-xs-12">
+									<div class="pop-off-sm testimonial wow fadeInUp">
+										<figure class="avatar"><img src="{{ url_for('static', path='dummy/person-1.jpg') }}" alt=""></figure>
+										<blockquote class="testimonial-body">
+											<p></p>
+											<cite>FANABIRD</cite>
+											<span>PRESIDENT <br> LEADER DU GROUPE <br> GUIDE ACCOMPAGNATEUR
+												NATIONAL </span>
+										</blockquote>
+									</div>
+								</div>
+							</a>
+							<a href="about-us.html#sedy">
+
+								<div class="col-md-4 col-sm-6 col-xs-12">
+									<div class="pop-off-sm testimonial wow fadeInUp" data-wow-delay=".2s">
+										<figure class="avatar"><img src="{{ url_for('static', path='dummy/person-2.jpg') }}" alt=""></figure>
+										<blockquote class="testimonial-body">
+											<p></p>
+											<cite>SEDY</cite>
+											<span>VICE-PRESIDENT <br> GUIDE NATIONAL <br> ANIMATEUR</span>
+										</blockquote>
+									</div>
+								</div>
+							</a>
+							<a href="about-us.html#oli">
+								<div class="col-md-4 col-sm-6 col-xs-12">
+									<div class=" pop-off-sm testimonial wow fadeInUp" data-wow-delay=".4s">
+										<figure class="avatar"><img src="{{ url_for('static', path='dummy/person-3.jpg') }}" alt=""></figure>
+										<blockquote class="testimonial-body">
+											<p></p>
+											<cite>OLI</cite>
+											<span>TRESORIER-COMPTABLE <br> SOCIO-ORGANISATEUR <br> RESPONSABLE DE
+												BUREAU</span>
+										</blockquote>
+									</div>
+								</div>
+							</a>
+							<a href="about-us.html#valix">
+
+								<div class="col-md-4 col-sm-6 col-xs-12">
+									<div class="pop-off-sm testimonial wow fadeInUp" data-wow-delay=".6s">
+										<figure class="avatar"><img src="{{ url_for('static', path='dummy/person-4.jpg') }}" alt=""></figure>
+										<blockquote class="testimonial-body">
+											<p></p>
+											<cite>VALIX</cite>
+											<span>SECRETAIRE GENERALE <br> TECHNICIENS <br> RESPONSABLE
+												ECOTOURISME </span>
+										</blockquote>
+									</div>
+								</div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+			</main> <!-- .content -->
+
+			<footer class="site-footer wow fadeInUp">
+				<div class="footer-bottom" >
+					<div class="container">
+						<div class="branding pull-left">
+							<img src="{{ url_for('static', path='images/logo-footer.png') }}" alt="Company Name" class="logo">
+						</div>
+
+						<div class="contact-links pull-right">
+							<a
+								href="https://www.google.com/maps/place/Fianarantsoa/@-21.447632,46.9504843,12z/data=!3m1!4b1!4m6!3m5!1s0x21e7bec0717f0aab:0xbab89234313f05ed!8m2!3d-21.4546147!4d47.0875045!16zL20vMDd3bHpm"><i
+									class="fa fa-map-marker"></i>Fianarantsoa Madagascar</a>
+							<a href="tel:+261343249131"><i class="fa fa-phone"></i>+261-34-32-491-31</a>
+							<a href="mailto:fanabird@yahoo.fr"><i class="fa fa-envelope"></i>
+								Mada@tretreka.mg</a>
+						</div>
+					</div>
+				</div>
+				<div class="colophon">
+					<div class="container">
+						<p style="text-align:center;" class="copy">Copyright 2022 , Designed by
+							Madanum, All right reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+		<script src="{{ url_for('static', path='js/jquery-1.11.1.min.js') }}"></script>
+		<script src="{{ url_for('static', path='js/min/plugins-min.js') }}"></script>
+		<script src="{{ url_for('static', path='js/min/app-min.js') }}"></script>
+
+	</body>
+
+</html>

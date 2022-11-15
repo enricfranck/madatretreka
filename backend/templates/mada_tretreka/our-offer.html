@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Our Offer</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,700" rel="stylesheet" type="text/css">
+		<link href="{{ url_for('static', path='fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{{ url_for('static', path='css/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+		
+		<!--[if lt IE 9]>
+		<script src="{{ url_for('static', path='js/ie-support/html5.js') }}"></script>
+		<script src="{{ url_for('static', path='js/ie-support/respond.js') }}"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		
+		<div id="site-content">
+			<div class="slider">
+				<ul class="slides">
+					<li data-background="{{ url_for('static', path='dummy/slide-5.jpg') }}">
+						
+					</li>
+
+
+				</ul>
+				<div class="flexslider-controls">
+					<div class="container">
+						
+					</div>
+				</div>
+			</div>
+			<header class="site-header wow fadeInDown justify-content-center" style="position:absolute; left: 10%; top: 15px; transform: translateX(-50% -50%);">
+				<div class="container">
+					<div class="header-content">
+						<div class="branding">
+							<a href="index.html">	
+								<img src="{{ url_for('static', path='images/logo.png') }}" alt="Company Name" class="logo">
+							</a>
+							
+						</div>
+						
+						<nav class="main-navigation">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="{{ url_for('home') }}">Accueil</a></li>
+								<li class="menu-item"><a href="{{ url_for('about_us') }}" >Qui sommes nous</a></li>
+								<li class="menu-item"><a href="{{ url_for('customer_protection') }}">Madagascar</a></li>	
+								<li class="menu-item  current-menu-item dropdown"><a href="our-offer.html">Nos circuits</a>
+									<ul class="dropdown-content pop-off">
+											<li><a href="{{ url_for('circuit') }}"> LA TERRE DES AVENTURES</a></li>
+											<li><a  href="{{ url_for('circuit') }}">LE TRESOR CACHE DE L'OUEST</a></li>
+											<li><a  href="{{ url_for('circuit') }}">LA TERRE DES INCONNUS</a></li>
+											<li><a  href="{{ url_for('circuit') }}">LE SECRET DE L'ILE ROUGE</a></li>
+											<li><a  href="{{ url_for('circuit') }}">CIRCUIT SPECIAL BIRD</a></li>
+											<li><a  href="{{ url_for('circuit') }}">CIRCUIT AUX ALENTOURS DE FIANAR</a></li>
+											<li><a href="{{ url_for('circuit') }}">CIRCUIT MAKAY</a></li>
+											<li><a href="{{ url_for('circuit') }}">CIRCUIT PERSONNALISE</a></li>
+									</ul>
+								</li>
+							
+								<li class="menu-item"><a  href="{{ url_for('our_offer') }}">Location voitures</a></li>
+								<li class="menu-item"><a  href="{{ url_for('our_offer') }}">Mada tretreka</a></li>
+								<li class="menu-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+							</ul>
+						</nav>
+						
+					</div>
+					<nav class="breadcrumbs">
+						<a href="index.html">Accueil</a> &rarr;
+						<span>Nos circuits</span>
+					</nav>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="content">
+				<div class="fullwidth-block">
+					<div class="container">
+					
+						<div class="filterable-items">
+						
+							
+							<div class="filterable-item australia" >
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-3.jpg') }}" alt="">
+									</figure>
+									<h2 class="entry-title"><a href="#">LA TERRE DES AVENTURES</a></h2>
+									<p>destiné aux aventureux aimant la découverte culturelle et éco-solidaire.</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+							<div class="filterable-item south-america">
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-1.jpg') }}" alt="">
+									</figure>
+									<h2 class="entry-title"><a href="#">LE TRESOR CACHE DE L'OUEST</a></h2>
+									<p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+							<div class="filterable-item asia">
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-2.jpg') }}" alt="">
+									</figure> 
+									<h2 class="entry-title"><a href="#">LA TERRE DES INCONNUS</a></h2>
+									<p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+							<div class="filterable-item africa">
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-3.jpg') }}" alt="">
+									</figure>
+									<h2 class="entry-title"><a href="#">LE SECRET DE L'ILE ROUGE</a></h2>
+									<p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+							<div class="filterable-item north-america">
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-1.jpg') }}" alt="">
+									</figure>
+									<h2 class="entry-title"><a href="#">CIRCUIT SPECIAL BIRD</a></h2>
+									<p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+							<div class="filterable-item europe">
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-2.jpg') }}" alt="">
+									</figure>
+									<h2 class="entry-title"><a href="#">CIRCUIT AUX ALENTOURS DE FIANAR</a></h2>
+									<p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+							<div class="filterable-item australia">
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src="{{ url_for('static', path='dummy/offer-thumbnail-3.jpg') }}" alt="">
+									</figure>
+									<h2 class="entry-title"><a href="#">CIRCUIT PERSONNALISE</a></h2>
+									<p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
+									<div class="price center">
+										<a href="" class="button"><b>Détails ></b></a>
+									</div>
+								</article>
+							</div>
+						</div>
+
+						<div class="pagination wow fadeInUp">
+							<span class="page-numbers current">1</span>
+						</div>
+
+					</div>
+
+				</div>
+
+				
+			</main> <!-- .content -->
+
+			<footer class="site-footer wow fadeInUp">
+				
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="branding pull-left">
+							<img src="{{ url_for('static', path='images/logo-footer.png') }}" alt="Company Name" class="logo">
+							
+						</div>
+
+						<div class="contact-links pull-right">
+							<a href="https://goo.gl/maps/oQKxg"><i class="fa fa-map-marker"></i> Fianarantsoa</a>
+							<a href="tel:+134453455345"><i class="fa fa-phone"></i> +261-3X-XX-XXX-XX</a>
+							<a href="mailto:contact@companyname.com"><i class="fa fa-envelope"></i> Mada@tretreka.com</a>
+						</div>
+					</div>
+				</div>
+				<div class="colophon">
+					<div class="container" style="text-align: center;">
+						<p class="copy">Copyright 2022 MADATRETREKA Designed by Madanum, All right reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+		<script src="{{ url_for('static', path='js/jquery-1.11.1.min.js') }}"></script>
+		<script src="{{ url_for('static', path='js/min/plugins-min.js') }}"></script>
+		<script src="{{ url_for('static', path='js/min/app-min.js') }}"></script>
+		
+	</body>
+
+</html>

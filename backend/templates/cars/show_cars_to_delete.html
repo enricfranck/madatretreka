@@ -1,0 +1,53 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %}
+  <title>Delete cars</title>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-5 text-center text-danger mb-3">Delete cars</h1>
+    </div>
+    <div id="result" class="text-danger text-bold lead"></div>
+  </div>
+
+  <div class="row">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Sr. No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Url</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for car in cars %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{car.name}}</td>
+                <td>{{car.url_image}}</td>
+                <td><button class="btn btn-danger btn-sm" onclick="delete_car({{car.id}})">Delete</button></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript">
+    function delete_car(id){
+        fetch('/cars/delete/'+id,{
+            method:'DELETE',})
+        .then(response => response.json())
+        .then(document.getElementById('result').innerHTML = "Refreshing...")
+        .then(data => document.getElementById('result').innerHTML = data.detail);
+    }
+</script>
+{% endblock %}
