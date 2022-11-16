@@ -25,11 +25,11 @@ templates = Jinja2Templates(directory="backend/templates")
 router = APIRouter(include_in_schema=False)
 
 
-@router.get("/")
-async def home(request: Request, db: Session = Depends(get_db), msg: str = None):
+@router.get("/cars")
+async def cars(request: Request, db: Session = Depends(get_db), msg: str = None):
     cars = list_cars(db=db)
     return templates.TemplateResponse(
-        "mada_tretreka/index.html", {"request": request, "cars": cars, "msg": msg}
+        "mada_tretreka/car.html", {"request": request, "cars": cars, "msg": msg}
     )
 
 @router.get("/about_us")
@@ -119,23 +119,28 @@ def search(
     )
 
 
+
 @router.get("/image/")
 def get_file(name_file: str):
-    path = os.getcwd() + "/files/" + name_file
+    path = os.getcwd() + "/backend/files/" + name_file
+    print(path)
     if os.path.exists(path):
+        print(path)
         return FileResponse(path=path)
-
+    else:
+        return "No result"
 
 @router.post("/upload/")
 async def create_upload_file(*,
                              uploaded_file: UploadFile = File(...), name_image: str
                              ):
+    name_image = name_image.replace(" ", "_")
     name = list(os.path.splitext(uploaded_file.filename))[1]
     allowed_files = {".jpg", ".jpeg", ".png"}
 
     if name.lower() not in allowed_files:
         raise HTTPException(status_code=402, detail="invalid image")
-    file_location = f"files/{name_image}{name}"
+    file_location = f"backend/files/{name_image}"
     with open(file_location, "wb+") as file_object:
         file_object.write(uploaded_file.file.read())
-    return {"filename": f'{name_image}{name}'}
+    return {"filename": f'{name_image}'}

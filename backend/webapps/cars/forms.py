@@ -23,6 +23,7 @@ class carCreateForm:
             self.errors.append("A valid name is required")
         if not self.url_image:
             self.errors.append("Valid Url is required ")
+        self.url_image = self.url_image.replace(" ", "_")
         if not self.description or not len(self.description) >= 10:
             self.errors.append("Description too short")
         if not self.errors:

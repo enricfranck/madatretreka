@@ -2251,7 +2251,7 @@ body {
   }
 }
 .main-navigation .menu li {
-  color: white;
+  color: black;
   display: inline-block;
 }
 @media screen and (max-width: 640px) {
@@ -2358,13 +2358,12 @@ body {
 }
 .slider .slides li .slide-caption {
   position: absolute;
-  right: 15px;
   bottom: 0px;
   background: white;
-  padding: 30px;
+  padding: 15px;
   border-radius: 5px;
-  height: 355px;
-  top: 90px;
+  height: 200px;
+  top: 450px;
   margin: auto;
 }
 @media screen and (max-width: 990px) {
@@ -2392,7 +2391,7 @@ body {
   position: absolute;
   right: 0;
   z-index: 99;
-  bottom: 150px;
+  bottom: 200px;
   width: 390px;
   text-align: center;
 }

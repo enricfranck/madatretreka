@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Contact</title>
+		<title>Our Offer</title>
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,700" rel="stylesheet" type="text/css">
 		<link href="{{ url_for('static', path='fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -14,8 +14,8 @@
 		<link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
 		
 		<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
+		<script src="{{ url_for('static', path='js/ie-support/html5.js') }}"></script>
+		<script src="{{ url_for('static', path='js/ie-support/respond.js') }}"></script>
 		<![endif]-->
 
 	</head>
@@ -23,30 +23,47 @@
 	<body>
 		
 		<div id="site-content">
-			
-			<header class="site-header wow fadeInDown" style="position:center; background-color:#34d6e6;">
+			<div class="slider">
+				<ul class="slides">
+					<li data-background="{{ url_for('static', path='dummy/slide-5.jpg') }}">
+						
+					</li>
+
+
+				</ul>
+				<div class="flexslider-controls">
+					<div class="container">
+						
+					</div>
+				</div>
+			</div>
+			<header class="site-header wow fadeInDown justify-content-center" style="position:absolute; left: 10%; top: 15px; transform: translateX(-50% -50%);">
 				<div class="container">
 					<div class="header-content">
 						<div class="branding">
-							<a href="{{ url_for('home') }}">
-
+							<a href="index.html">	
 								<img src="{{ url_for('static', path='images/logo.png') }}" alt="Company Name" class="logo">
 							</a>
+							
 						</div>
+						
 						<nav class="main-navigation">
 							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
 								<li class="menu-item"><a href="{{ url_for('home') }}">Accueil</a></li>
 								<li class="menu-item"><a href="{{ url_for('about_us') }}" >Qui sommes nous</a></li>
-								<li class="menu-item"><a href="{{ url_for('customer_protection') }}">Madagascar</a></li>
-								<li class="menu-item"><a href="{{ url_for('our_offer') }}">nos circuits</a></li>
+								<li class="menu-item"><a href="{{ url_for('customer_protection') }}">Madagascar</a></li>	
+								<li class="menu-item  current-menu-item dropdown"><a href="our-offer.html">Nos circuits</a>
+								<li class="menu-item"><a  href="{{ url_for('cars') }}">Location voitures</a></li>
+								<li class="menu-item"><a  href="{{ url_for('our_offer') }}">Mada tretreka</a></li>
 								<li class="menu-item"><a href="{{ url_for('contact') }}">Contact</a></li>
 							</ul>
 						</nav>
+						
 					</div>
 					<nav class="breadcrumbs">
-						<a href="{{ url_for('home') }}">Accueil</a> &rarr;
-						<span>Contact</span>
+						<a href="index.html">Accueil</a> &rarr;
+						<span>Nos circuits</span>
 					</nav>
 				</div>
 			</header> <!-- .site-header -->
@@ -54,29 +71,22 @@
 			<main class="content">
 				<div class="fullwidth-block">
 					<div class="container">
-						<div class="row">
-							<div class="col-md-4 wow fadeInLeft">
-								<h4>Mada Tretreka</h4>
-								<ul class="list-fa">
-									<li><i class="fa fa-map-marker"></i>Fianarantsoa</li>
-									<li><i class="fa fa-phone"></i> +261-3X-XX-XXX-XX</li>
-									<li><i class="fa fa-envelope"></i>Mada@Tretreka.com</li>
-								</ul>
-
-								<form action="#" class="contact-form">
-									<input type="text" placeholder="Votre nom...">
-									<input type="text" placeholder="Nom de votre entreprise...">
-									<input type="text" placeholder="Email">
-									<textarea name="" id="" placeholder="Message..."></textarea>
-									<input type="submit" class="button" value="Send Message">
-								</form>
+					
+						<div class="filterable-items">
+      					{% for car in cars %}
+							<div class="filterable-item australia" >
+								<article class="offer-item pop-off">
+									<figure class="featured-image">
+										<img src={{"http://localhost:8000/cars/image/?name_file="+car.url_image}} alt="image">
+									</figure>
+									<h2 class="entry-title"><a href="#">{{car.name}}</a></h2>
+									<p>{{car.description}}</p>
+								</article>
 							</div>
-							<div class="col-md-7 col-md-push-1 wow fadeInRight">
-								<div class="map">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59416.49160783142!2d47.05075200726841!3d-21.44768270775098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21e7bec0717f0aab%3A0xbab89234313f05ed!2sFianarantsoa!5e0!3m2!1sfr!2smg!4v1666776821776!5m2!1sfr!2smg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-								</div>
-							</div>
-							
+						
+							{% endfor %}
+						<div class="pagination wow fadeInUp">
+							<span class="page-numbers current">1</span>
 						</div>
 
 					</div>

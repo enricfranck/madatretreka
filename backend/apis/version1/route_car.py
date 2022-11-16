@@ -93,6 +93,10 @@ def autocomplete(term: Optional[str] = None, db: Session = Depends(get_db)):
 
 @router.get("/image/")
 def get_file(name_file: str):
-    path = os.getcwd() + "/files/" + name_file
+    path = os.getcwd() + "/backend/files/" + name_file
+    print(path)
     if os.path.exists(path):
+        print(path)
         return FileResponse(path=path)
+    else:
+        return "No result"
